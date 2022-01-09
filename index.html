@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coachuing</title>
+    <link rel="stylesheet" type="text/css" href="/style1.css"/>
+    <script type="text/javascript">
+    var width=100;
+    var difference=2;
+    var intervalID=0;
+
+    function fn1()
+    {
+        var str=document.getElementById("text1").value;
+        alert("Value inside the text box is:"+str);
+
+    }
+
+    function increase()
+    {
+        setInterval(zoomIn,20);
+    }
+
+    function decrease()
+    {
+        setInterval(zoomOut,20);
+    }
+
+    function zoomIn()
+    {
+       if(width<200)
+       {
+           width=width+difference;
+           document.getElementById("img1").style.width=width
+           console.log(width);
+       }
+       else
+       {
+           clearInterval(intervalID);
+
+       }
+    }
+
+    function zoomOut()
+    {
+       if(width>100)
+       {
+           width=width-difference;
+           document.getElementById("Sn@ch.jpg").style.width=width
+           console.log(width);
+       }
+       else
+       {
+           clearInterval(intervalID);
+
+       }
+    }
+
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <div class="logo">
+                <img src="Sn@ch.jpg" alt="LOGO" width="100px" height="100px" onmouseover="increase()" onmouseout="decrease()"
+                id="img1"></div>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+        <div class="right-nav">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+    </nav>
+
+    <section class="background first section">
+        <div class="box-main">
+            <div class="firsthalf">
+                <p class="text-big">The Future of Education is here</p>
+                <p class="text-small">Education is an important tool which is very useful in everybody’s life. Education is what differentiates us from other living beings on earth. It makes man the smartest creature on earth. It empowers humans and gets them ready to face challenges of life efficiently. With that being said, education still remains a luxury and not a necessity in our country. Educational awareness needs to be spread through the country to make education accessible. But, this remains incomplete without first analyzing the importance of education. Only when the people realize what significance it holds, can they consider it a necessity for a good life. In this essay on Education, we will see the importance of education and how it is a doorway to success.
+
+                </p>
+            </div>
+            <div class="secondhalf"></div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        var p1="Friends";
+        var p2="Teachers";
+        var p3="Failure";
+        var poems=["Friends","Teachers","Failure"]
+
+        for( var i=0; i<3;i++)
+        {
+            document.write("<h2>"+poems[i]+"</h2>")
+        }
+    </script>
+
+    <input id="text1"placeholder="Enter Anything">
+    <br><br>
+    <input type="password" id="text2" placeholder="password">
+    <button onclick="fn1()" id="btn1">Click me</button>
+</body>
+</html>
